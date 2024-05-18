@@ -7,11 +7,11 @@ test('Login Test', async function({browser}){
     const userName = page.locator('input#userEmail');
     const userPass = page.locator('input#userPassword');
     const submit = page.locator('input.btn');
-    await page.goto("https://website.com");
+    await page.goto(process.env.URL);
     console.log(await page.title());
     await userName.fill(process.env.userN);
     await userPass.fill(process.env.userP);
-    await submit.click();
+    await submit.click();add 
 });
 
 
