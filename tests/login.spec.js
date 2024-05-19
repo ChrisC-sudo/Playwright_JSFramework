@@ -11,7 +11,7 @@ test('Login Test', async function({browser}){
     console.log(await page.title());
     await userName.fill(process.env.userN);
     await userPass.fill(process.env.userP);
-    await submit.click();add 
+    await submit.click();
 });
 
 
