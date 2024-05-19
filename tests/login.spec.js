@@ -9,12 +9,10 @@ test('Login Test', async function({browser}){
     const submit = page.locator('input.btn');
     await page.goto(process.env.URL);
     console.log(await page.title());
-    await userName.fill(process.env.userN);
-    await userPass.fill(process.env.userP);
+    await userName.fill(process.env.USERN);
+    await userPass.fill(process.env.USERP);
     await submit.click();
 });
-
-
 
 
 
