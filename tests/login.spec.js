@@ -1,17 +1,25 @@
 import { test, expect } from '@playwright/test';
+require('dotenv').config();
+
+async function locate(){
+    const selectors= {
+        USERN:'input#userEmail',
+        USERP:'input#userPassword',
+        SUBMIT:'input.btn'
+    }
+    return selectors;
+}
 
 test('Login Test', async function({browser}){
 
     const context = await browser.newContext();
     const page = await context.newPage();
-    const userName = page.locator('input#userEmail');
-    const userPass = page.locator('input#userPassword');
-    const submit = page.locator('input.btn');
-    await page.goto(process.env.URL);
+    const selectors = await locate();
+    await page.goto("https://courses.ultimateqa.com/users/sign_in");
     console.log(await page.title());
-    await userName.fill(process.env.USERN);
-    await userPass.fill(process.env.USERP);
-    await submit.click();
+    await page.fill(selectors.USERN,process.env.USERN);
+    await page.fill(selectors.USERP,process.env.USERP);
+    await page.click(selectors.SUBMIT);
 });
 
 
