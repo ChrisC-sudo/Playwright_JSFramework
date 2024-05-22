@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx nyc playwright test --headed",
+    "test": "npx nyc playwright test",
     "coverage": "npx nyc report --reporter=html"
   },
   "keywords": [],
