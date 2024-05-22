@@ -2,14 +2,21 @@
   "name": "playwjs",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "nyc playwright test test.js",
+    "coverage": "nyc report --reporter=lcov --reporter=text-summary"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.12"
+    "@types/node": "^20.12.12",
+    "babel-plugin-istanbul": "^6.1.1",
+    "codecov": "^3.8.3",
+    "nyc": "^15.1.0",
+    "playwright-test-coverage": "^1.2.12"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
