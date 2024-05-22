@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import exp from 'constants';
 require('dotenv').config();
 
-async function locate() {
+function locate() {
     const selectors = {
         WELCOME : '.page__heading',
         USERN: 'input[name="user[email]"]', 
