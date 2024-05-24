@@ -2,16 +2,22 @@
   "name": "playwjs",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx nyc playwright test",
+    "coverage": "npx nyc report --reporter=html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.12"
+    "@types/node": "^20.12.12",
+    "nyc": "^15.1.0",
+    "playwright": "^1.44.0"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^10.7.0",
     "dotenv": "^16.4.5"
   }
 }

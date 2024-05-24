@@ -18,3 +18,10 @@ To use this framework, you'll need [Node.js](https://nodejs.org) installed on yo
 
 ```bash
 npm install playwright
+
+
+# dotenv
+# istanbul-nyc
+# istanbul-playwright
+# jest optional
+# jest-playwright-preset
